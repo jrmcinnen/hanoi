@@ -1,0 +1,66 @@
+Hanoin torni
+
+
+Pelin säännöt:
+
+Pelialustalla on kolme tappia ja n määrä eri kokoisia kiekkoja. Alkutilanteessa
+kaikki kiekot ovat ensimmäisessä tapissa kokojärjestyksessä, siten että suurin
+kiekko on alimpana ja pienin ylimpänä. Tavoitteena on siirtää kiekot jompaan
+kumpaan toiseen tappiin tähän samaan järjestykseen. Kiekkoja saa siirtää vain
+yksi kerrallaan, eikä suurempaa kiekkoa saa siirtää pienemmän kiekon päälle.
+
+
+Pakolliset ominaisuudet:
+
+Pelialueelle on piirretty kolme tappia. Tapit on nimetty isoilla kirjaimilla
+A-C ja nimet on merkitty tappien alle. Peliä voi pelata n määrällä kiekkoja.
+Kiekkojen määrää voi muuttaa muuttamalla mainwindow.hh -tiedostossa olevan
+vakion arvoa. Alkutilanteessa kaikki kiekot ovat A-tapissa sääntöjen mukaisessa
+kokojärjestyksessä. Kiekkoja voi siirrellä painonappien avulla. Nappiin on mer-
+kitty, mikä siirto napista tapahtuu hyödyntäen tappien kirjainnimiä. Sääntöjen
+vastaiset siirrot on estetty poistamalla niitä vastaavat painikkeet käytöstä.
+Peli päättyy, kun kaikki kiekot ovat joko B tai C -tapissa. Kun peli voitetaan
+tulostuu pelialueen päälle onnitteluteksti. Pelin loppuessa kaikki siirtelypai-
+nikkeet otetaan pois käytöstä.
+
+
+Lisäominaisuudet:
+
+Jokaisella tapilla on oma värinsä. Kiekot muuttavat väriään sen mukaan, kun
+niitä siirtää. Kiekkojen värit ovat aina tummempi versio tapin väristä.
+
+Pelissä käytetty aika lasketaan. Start-painikkeesta käynnistyy ajastin, jonka
+avulla käyttäjälle näytetään siihen mennessä kulunut aika. Aika päivityy
+sekunnin välein. Pause-painikkeesta ajastin pysähtyy, eikä siirtojakaan voi
+tauon aikana tehdä, sillä siirtopainikkeet ovat pois käytöstä. Kun start-
+painiketta klikataan uudestaan lähtee ajastin taas käyntiin ja sallittuja
+siirtoja voidaan taas tehdä. Kun peli voitetaan, ajastin pysähtyy ja loppuaika
+näytetään pelaajalle.
+
+Tähän menessä paras aika tallennetaan omaan tekstitiedostoonsa
+("best_time.txt"). Ennen pelin alkua vanha ennätys tulostetaan käyttöliitty-
+mään. Aina pelin lopussa uutta aikaa verrataan ennätykseen. Mikäli uusi ennätys
+tehtiin, päivittyy se sekä käyttöliitymään että tiedostoon. Jos tehtiin uusi
+ennätys sen tuloste muuttuu vihreäksi. Jos uutta ennätystä ei tehty, niin aika
+ei päivity, vaan vanha ennätys muuttuu punaiseksi, sen merkiksi, että ennätystä
+ei saavutettu. Oletusennätyksenä käytetään merkkijonoa "xx:xx". Ennätyksen voi
+myös nollata painikkeesta.
+
+Pelin päätyttyä aktivoituu reset-painike, josta alkutilanteen voi palauttaa.
+Muissa tilanteissa painike ei ole käytössä. Myös ajastin nollautuu tästä pai-
+nikkeesta ja onnitteluteksti katoaa.
+
+Pelissä on animointiominaisuus. Pelin ollessa alkutilanteessa voi pelin ratkais-
+ta auto-painikkeesta. Ratkaisu tapahtuu tekemällä iteratiivisen algoritmin mu-
+kaisia siirtoja kunnes peli on voitettu. Siirtoja tehdään ajastimen mukaan
+puolen sekunnin välein. Jokaisen siirron jälkeen tallennetan tieto siitä, mikä
+siirto tehtiin seuraavaa siirtoa varten. Kun peli on ratkaistu, siitä ilmoite-
+taan pelajalle, eikä uusia siirtoja enää tehdä.
+
+
+Ohjelman tekijä:
+Nimi: Jere Mäkinen
+Opiskelijanumero: 273090
+UserID: makinenj
+Email: jere.makinen@tuni.fi
+
